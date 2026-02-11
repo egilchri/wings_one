@@ -1,0 +1,16 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:creator opf:role="aut" opf:file-as="James, Henry">Henry James</dc:creator>
+<dc:identifier opf:scheme="calibre" id="calibre_id">4d8c0b3c-f1b5-48be-8a41-f7100258be27</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">4d8c0b3c-f1b5-48be-8a41-f7100258be27</dc:identifier>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (8.10.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>0101-01-01T00:00:00+00:00</dc:date>
+        <dc:title>What Maisie Knew</dc:title>
+<meta name="calibre:title_sort" content="What Maisie Knew"/>
+<dc:language>eng</dc:language>
+</metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="cover.jpg"/>
+    </guide>
+</package>
