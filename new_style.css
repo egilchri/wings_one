@@ -1,0 +1,70 @@
+/* General Page Styling */
+body {
+    background-color: #fdfcf8; /* Cream paper feel */
+    color: #1a1a1a;
+    font-family: "Hoefler Text", "Baskerville", "Georgia", serif;
+    line-height: 1.7;
+    margin: 0 auto;
+    max-width: 850px;
+    padding: 40px 20px;
+}
+
+/* Title & Header */
+h1.chapter-title {
+    font-variant: small-caps;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+/* The Bilingual "Accordion" Style */
+details {
+    margin-bottom: 2rem;
+    border-left: 3px solid #d4af37; /* Gold accent line */
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+summary.calibre4 {
+    padding: 15px;
+    background-color: #f4f1ea;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    list-style: none;
+    border: 1px solid #e0ddd5;
+}
+
+summary.calibre4:hover {
+    background-color: #ede9df;
+}
+
+.translation-content {
+    padding: 20px;
+    font-size: 1.05em;
+    color: #444;
+    border: 1px solid #e0ddd5;
+    border-top: none;
+}
+
+/* Original Text Styling */
+.original-text {
+    font-size: 1.15em;
+    padding: 0 15px;
+    margin-bottom: 0.5rem;
+}
+
+/* Audio Player Styling */
+audio {
+    width: 100%;
+    margin: 20px 0;
+    filter: sepia(20%) grayscale(20%); /* Blends with the cream theme */
+}
+
+/* Responsive Media Queries */
+@media (max-width: 600px) {
+    body { padding: 15px; }
+    h1.chapter-title { font-size: 1.8em; }
+}
