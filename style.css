@@ -1,50 +1,64 @@
-/* Dante-Style Grid for Chapter Links */
-.chapter-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 15px;
-    margin: 40px 0;
-    padding: 0;
-    list-style: none;
-}
-
-.chapter-grid li a {
-    display: block;
-    background-color: #2c3e50; /* Deep Dante Blue */
-    color: #ffffff !important;
-    text-align: center;
-    padding: 15px 10px;
-    text-decoration: none;
-    font-variant: small-caps;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: background 0.3s ease;
-}
-
-.chapter-grid li a:hover {
-    background-color: #34495e;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* Remove "Middle Portion" Clutter */
-.main-body {
-    padding-top: 0;
-    margin-top: 0;
-}
-
-/* Typography and Page Feel */
+/* Page Layout */
 body {
     background-color: #fdfcf8;
     font-family: "Palatino", "Georgia", serif;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 40px 20px;
     line-height: 1.8;
 }
 
-h1.frontispiece-title {
+h1.main-title {
     text-align: center;
     font-size: 2.5em;
     font-variant: small-caps;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+/* The Grid Container */
+.chapter-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+/* The Blue Square Tile */
+.chapter-square {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    background-color: #007bff;
+    border: 1px solid #0056b3;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #ffffff !important;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.square-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 4px;
+    font-family: "Helvetica", sans-serif;
+}
+
+.square-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Hover State */
+.chapter-square:hover {
+    transform: translateY(-5px);
+    background-color: #0056b3;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
