@@ -15,15 +15,16 @@ h1.main-title {
     margin-bottom: 0.2em;
 }
 
-/* New Volume Subtitle */
+/* Specific centering and italics for Volume 1 */
 .volume-subtitle {
-    text-align: center;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 1.4em;
-    margin-top: -0.2em;
-    margin-bottom: 2em;
-    color: #555;
+    display: block;          /* Forces the element to take full width */
+    text-align: center;      /* Centers the text within that width */
+    width: 100%;             /* Ensures it spans the page */
+    font-style: italic;      /* Makes it italics */
+    font-weight: normal;     /* Removes the bold look usually on h2 */
+    font-size: 1.4em;        /* Sets a readable size */
+    margin: 0 0 2em 0;       /* Adds space below it */
+    color: #555;             /* Softens the color to a dark grey */
 }
 
 /* The Grid Container */
