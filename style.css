@@ -1,114 +1,50 @@
-.calibre {
+/* Dante-Style Grid for Chapter Links */
+.chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+    margin: 40px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.chapter-grid li a {
     display: block;
-    font-size: 1em;
-    margin-bottom: 0;
-    margin-left: 5pt;
-    margin-right: 5pt;
-    margin-top: 0;
-    padding-left: 0;
-    padding-right: 0
-    }
-.calibre1 {
-    display: block;
-    font-size: 1.66667em;
+    background-color: #2c3e50; /* Deep Dante Blue */
+    color: #ffffff !important;
+    text-align: center;
+    padding: 15px 10px;
+    text-decoration: none;
+    font-variant: small-caps;
     font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 0.83em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0.83em
-    }
-.calibre2 {
-    display: block;
-    list-style-type: decimal;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1em
-    }
-.calibre3 {
-    display: list-item
-    }
-.calibre4 {
-    background-color: #eee;
-    cursor: pointer;
-    font-weight: bold;
-    list-style-image: none;
-    list-style-position: outside;
-    list-style-type: none;
-    padding-bottom: 12px;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 12px
-    }
-.calibre5 {
-    display: block;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1em
-    }
-.calibre6 {
-    font-style: italic
-    }
-.chapter-title {
-    color: #333;
-    display: block;
-    font-size: 2em;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 1.2em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0.67em;
-    text-align: center
-    }
-.main-body {
-    display: block
-    }
-.original-text {
-    color: #000;
-    display: block;
-    margin-top: 1.5em
-    }
-.summary-box {
-    border-bottom-color: #ddd;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-left-color: #ddd;
-    border-left-style: solid;
-    border-left-width: 1px;
     border-radius: 4px;
-    border-right-color: #ddd;
-    border-right-style: solid;
-    border-right-width: 1px;
-    border-top-color: #ddd;
-    border-top-style: solid;
-    border-top-width: 1px;
-    margin-bottom: 25px
-    }
-.summary-content {
-    background-color: #f6f6f6;
-    border-top-color: #ddd;
-    border-top-style: solid;
-    border-top-width: 1px;
-    color: #444;
-    display: block;
-    font-style: italic;
-    padding-bottom: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px
-    }
-.translation-content {
-    color: #666;
-    display: block;
-    font-style: italic;
-    margin-bottom: 1.5em
-    }
+    transition: background 0.3s ease;
+}
 
-@page {
-    margin-bottom: 5pt;
-    margin-top: 5pt
-    }
+.chapter-grid li a:hover {
+    background-color: #34495e;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
+/* Remove "Middle Portion" Clutter */
+.main-body {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/* Typography and Page Feel */
+body {
+    background-color: #fdfcf8;
+    font-family: "Palatino", "Georgia", serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    line-height: 1.8;
+}
+
+h1.frontispiece-title {
+    text-align: center;
+    font-size: 2.5em;
+    font-variant: small-caps;
+    margin-bottom: 0.5em;
+}
