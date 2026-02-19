@@ -1,94 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <link href="{{ '/style.css' | relative_url }}" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-49F7ZDY541"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-49F7ZDY541');
-    </script>    
+    <link rel="stylesheet" href="{{ "/new_style.css" | relative_url }}">
 </head>
 <body>
-    <div class="calibre" id="calibre_link-0">
-        
-        <div style="background: #fdfdfd; padding: 20px; border: 1px solid #eee; border-radius: 12px; margin: 25px 0; text-align: center; font-family: sans-serif; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-            <h3 style="margin-top: 0; color: #444; font-size: 1.2em;">🎧 Audiobook Navigator</h3>
-            <p style="font-size: 0.9em; color: #666;">Quickly jump to a chapter by typing its name below.</p>
-            
-            <div style="margin-bottom: 15px;">
-                <input type="text" id="chapterSearch" placeholder="e.g. Chapter IV" style="padding: 8px; width: 180px; border-radius: 5px; border: 1px solid #ccc;">
-                <button onclick="jumpToChapter()" style="padding: 8px 15px; border-radius: 5px; background: #007aff; color: white; border: none; cursor: pointer; font-weight: bold;">Jump</button>
-            </div>
-            
-            <div id="active-chapter" style="font-weight: bold; color: #007aff; margin-bottom: 10px; min-height: 1.2em;">Introduction</div>
-            
-            <audio id="audioPlayer" controls preload="metadata" style="width: 100%; max-width: 450px; margin-bottom: 12px;">
+    <header style="text-align: center; margin-bottom: 60px;">
+        <p style="letter-spacing: 3px; font-size: 0.8em; text-transform: uppercase;">The Bilingual Library</p>
+    </header>
 
-               <source src="https://media.githubusercontent.com/media/egilchri/wings_one/main/wings_one_all.mp3" type="audio/mpeg">
-
-            </audio>
-        </div>
-
+    <main>
         {{ content }}
+    </main>
 
-    </div>
-
-    <script>
-        // Chapter mapping (seconds). Note: Update these numbers via your Python script!
-        const chapterMap = {
-            "chapter i": 0,
-            "chapter ii": 3914,
-            "chapter iii": 7444,
-            "chapter iv": 12309,
-            "chapter v": 16695,
-            "chapter vi": 20963,
-            "chapter vii": 23518,
-            "chapter viii": 27355,
-            "chapter ix": 30077,
-            "chapter x": 33487,
-            "chapter xi": 35229,
-            "chapter xii": 37451,
-            "chapter xiii": 40351,
-            "chapter xiv": 42750,
-            "chapter xv": 44884,
-            "chapter xvi": 47249,
-        };
-        
-        const player = document.getElementById('audioPlayer');
-        const searchInput = document.getElementById('chapterSearch');
-        const display = document.getElementById('active-chapter');
-
-        function jumpToChapter() {
-            const query = searchInput.value.toLowerCase().trim();
-            if (chapterMap[query] !== undefined) {
-                player.currentTime = chapterMap[query];
-                player.play();
-            } else { 
-                alert("Chapter not recognized. Try 'Chapter II' or 'Chapter III'."); 
-            }
-        }
-
-        // Listen for "Enter" key in the search box
-        searchInput.addEventListener("keypress", function(event) {
-            if (event.key === "Enter") {
-                jumpToChapter();
-            }
-        });
-
-        player.addEventListener('timeupdate', () => {
-            let current = "Introduction";
-            for (const [name, time] of Object.entries(chapterMap)) {
-                if (player.currentTime >= time) { 
-                    current = name.toUpperCase(); 
-                }
-            }
-            display.innerText = "Currently Playing: " + current;
-        });
-    </script>
+    <footer style="margin-top: 100px; text-align: center; font-size: 0.8em; color: #888;">
+        <p>A Digital Edition by Grandpa</p>
+    </footer>
 </body>
 </html>
