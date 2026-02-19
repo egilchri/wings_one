@@ -48,3 +48,48 @@ h1.frontispiece-title {
     font-variant: small-caps;
     margin-bottom: 0.5em;
 }
+
+/* Center the main title */
+.main-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: "Times New Roman", serif;
+}
+
+/* Create the grid container */
+.chapter-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Style each chapter as a square */
+.chapter-square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.chapter-square:hover {
+    background-color: #007bff;
+    color: white;
+    border-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
