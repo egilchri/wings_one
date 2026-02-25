@@ -7,32 +7,34 @@
 </head>
 <body>
 
-<div id="sticky-header" style="position: sticky; top: 0; background: #fdfcf8; padding: 15px; border-bottom: 2px solid #333; z-index: 9999; display: flex; align-items: center; gap: 20px;">
+<div id="sticky-header" style="position: sticky; top: 0; background: #fdfcf8; padding: 15px; border-bottom: 2px solid #333; z-index: 9999; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
 
-<!-- The Audio Player -->
-<audio id="header-audio" controls style="height: 30px;">
-<source src="{{ page.audio_url }}" type="audio/mpeg">
-</audio>
+    <a href="{{ site.baseurl }}/index.html" style="text-decoration: none; font-weight: bold; color: #007bff; font-family: sans-serif; font-size: 16px;">🏠 Home</a>
 
-<!-- The Slider -->
-<div>
-<label style="font-size: 14px;">Text Size: </label>
-<input type="range" id="sizeSlider" min="16" max="40" value="20">
-<span id="sizeValue" style="font-size: 14px; font-weight: bold;">20px</span>
-</div>
+    <audio id="header-audio" controls style="height: 30px; flex-grow: 1;">
+        <source src="{{ page.audio_url }}" type="audio/mpeg">
+    </audio>
 
-</div>
-    <div class="container">
-        {{ content }}
+    <div style="display: flex; align-items: center; gap: 10px; white-space: nowrap;">
+        <label style="font-size: 14px;">Text Size: </label>
+        <input type="range" id="sizeSlider" min="16" max="40" value="20">
+        <span id="sizeValue" style="font-size: 14px; font-weight: bold;">20px</span>
     </div>
+
+</div>
+
+<div class="container">
+    {{ content }}
+</div>
+
 <script>
-const slider = document.getElementById('sizeSlider');
-const output = document.getElementById('sizeValue');
-slider.oninput = function() {
-const val = this.value + 'px';
-output.innerHTML = val;
-document.documentElement.style.setProperty('--reader-size', val);
-};
+    const slider = document.getElementById('sizeSlider');
+    const output = document.getElementById('sizeValue');
+    slider.oninput = function() {
+        const val = this.value + 'px';
+        output.innerHTML = val;
+        document.documentElement.style.setProperty('--reader-size', val);
+    };
 </script>
 
 </body>

@@ -1,0 +1,62 @@
+Chapter 2: Marian's Shabby Comfort
+{
+"action": "dalle.text2im",
+"action_input": "{ "prompt": "An impressionist oil painting in the style of Claude Monet. A room in Chelsea, London, filled with a sense of 'shabby' domesticity and 'smells of cooking'. Marian Condrip, a young widow in mourning black, sits among her four small children. The light is soft and hazy, filtering through a window, highlighting the 'dusty' and 'crowded' interior. Soft brushstrokes of muted grey, black, and warm amber. The atmosphere is heavy with familial duty and modest means. Focus on light and the textures of a lived-in home.", "size": "1024x1024" }",
+"thought": "This captures Kate's visit to her sister Marian's home, emphasizing the 'smell of cooking' and the 'shabby' reality of Marian's life."
+}
+
+Chapter 3: The Grandeur of Lancaster Gate
+{
+"action": "dalle.text2im",
+"action_input": "{ "prompt": "An impressionist oil painting in the style of Claude Monet. The interior of a grand, wealthy London house at Lancaster Gate. Aunt Maud (Mrs. Lowder), a formidable and 'massive' woman, sits in a room filled with 'heavy' and 'expensive' Victorian furniture. The light is rich and golden, reflecting off polished surfaces. Kate Croy stands nearby, her elegance contrasting with the 'monstrous' scale of the room. Broad, energetic brushstrokes of gold, crimson, and deep velvet. The scene feels like a 'court' or a 'counting-house'.", "size": "1024x1024" }",
+"thought": "This represents the transition to Aunt Maud’s world, described as 'the tall, rich, heavy house at Lancaster Gate' and 'the scale of a court'."
+}
+
+Chapter 4: Merton Densher in Kensington Gardens
+{
+"action": "dalle.text2im",
+"action_input": "{ "prompt": "An impressionist oil painting in the style of Claude Monet. A winter morning in Kensington Gardens, London. Merton Densher, a young man with a 'sensitive' and 'intellectual' face, walks through the misty, frost-covered park. The light is a pale, cool blue and soft grey. Bare trees create a delicate lace-like pattern against the sky. The mood is one of quiet contemplation and romantic longing. Flickering brushstrokes capture the 'grey-green' and 'silvery' winter atmosphere.", "size": "1024x1024" }",
+"thought": "This introduces Merton Densher and the setting of Kensington Gardens where he and Kate meet."
+}
+
+Chapter 5: The Secret Tryst
+{
+"action": "dalle.text2im",
+"action_input": "{ "prompt": "An impressionist oil painting in the style of Claude Monet. Kate Croy and Merton Densher walking together in a secluded, misty corner of a London park. They are close, leaning toward each other in quiet conversation. Kate is in her black hat and coat, Merton in a dark overcoat. The background is a soft blur of greens, greys, and pale yellows from the low winter sun. The scene captures the 'vibration' of their secret romance. High contrast between their dark silhouettes and the luminous, hazy air.", "size": "1024x1024" }",
+"thought": "This highlights the 'common ground' they find in their secret meetings and the 'vibration' of their connection."
+}
+
+Chapter 6: Mrs. Lowder's Dinner Party
+{
+"action": "dalle.text2im",
+"action_input": "{ "prompt": "An impressionist oil painting in the style of Claude Monet. A lavishly set dinner table at Lancaster Gate, gleaming with silver and crystal under warm candlelight. Aunt Maud dominates the head of the table. Guests are blurred shapes of elegance—tuxedos and shimmering evening gowns. Kate Croy and Merton Densher are seated at the table, their eyes meeting across the 'magnificence' of the scene. Rich, warm colors: deep oranges, golds, and shadows of indigo. The atmosphere is one of social 'pressure' and high-stakes games.", "size": "1024x1024" }",
+"thought": "This depicts the 'dinner-party' atmosphere where Kate and Densher are observed by Aunt Maud."
+}
+
+Chapter 7: Milly Theale on the Alpine Height
+{
+"action": "dalle.text2im",
+"action_input": "{ "prompt": "An impressionist oil painting in the style of Claude Monet. A young woman, Milly Theale, sitting alone on a high, rocky ledge in the Swiss Alps. She is looking out over a vast, dizzying panorama of mountains and valleys. The light is brilliant and crystalline. She appears small and fragile against the 'monstrous' scale of the nature. Colors of vibrant blue, white, and jagged grey. The mood is one of profound isolation and 'vertigo'. Broad, sweeping brushstrokes suggest the thin, high air and immense distance.", "size": "1024x1024" }",
+"thought": "This captures the iconic image of Milly sitting on a precipice, looking down at 'the kingdoms of the earth'."
+}
+
+Chapter 8: The Arrival in London
+{
+"action": "dalle.text2im",
+"action_input": "{ "prompt": "An impressionist oil painting in the style of Claude Monet. A London street scene in spring. Milly Theale and Susan Shepherd Stringham arriving in a carriage. The air is filled with the soft, 'shabby' light of a London afternoon. Figures of pedestrians are suggested with quick, dabbing brushstrokes. The architecture is a hazy mix of brick and stone. The mood is one of anticipation and the 'enormous' impression of the city. Soft pastels—pinks, greens, and hazy greys.", "size": "1024x1024" }",
+"thought": "This shows the arrival of Milly and Susan in London, a 'new world' for them."
+}
+
+Chapter 9: The Meeting at Lancaster Gate
+{
+"action": "dalle.text2im",
+"action_input": "{ "prompt": "An impressionist oil painting in the style of Claude Monet. Milly Theale meeting Aunt Maud and Kate Croy in the grand drawing room of Lancaster Gate. Milly, appearing 'pale' and 'exotic', is the center of attention. The room is a swirl of rich fabrics and golden light. Kate watches Milly with an expression of 'intense' curiosity. Dappled light falls on their faces, highlighting the 'different worlds' they represent. Colors of deep rose, gold, and dark shadows.", "size": "1024x1024" }",
+"thought": "This captures the first meeting between the American heiress and the London 'circle'."
+}
+
+Chapter 10: Lord Mark and the Bronzino
+{
+"action": "dalle.text2im",
+"action_input": "{ "prompt": "An impressionist oil painting in the style of Claude Monet. Milly Theale standing before a Renaissance portrait (a Bronzino) in a grand gallery. Lord Mark stands beside her, gesturing toward the painting. The light is focused on Milly and the portrait, which shares an uncanny resemblance to her. The gallery is filled with a soft, reverent glow. The colors are rich and 'historic'—deep reds, olives, and gold. The mood is one of 'doom' and 'recognition'. Blurred figures of other guests in the background.", "size": "1024x1024" }",
+"thought": "This represents the moment Lord Mark shows Milly the portrait that resembles her, heightening the theme of her 'fate'."
+}

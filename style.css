@@ -1,11 +1,22 @@
-/* Page Layout */
+/* Add this at the very top of test_style.css */
+:root {
+    --reader-size: 20px;
+}
+
 body {
     background-color: #fdfcf8;
     font-family: "Palatino", "Georgia", serif;
     max-width: 900px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 0 20px 40px 20px;
     line-height: 1.8;
+    font-size: var(--reader-size); /* Remove the fallback here */
+}
+
+p {
+    font-size: var(--reader-size) !important;
+    line-height: 1.8;
+    margin-bottom: 1.5em;
 }
 
 h1.main-title {
@@ -80,3 +91,18 @@ h1.main-title {
 audio { width: 100%; max-width: 500px; }
 details { margin-bottom: 2em; border: 1px solid #ddd; border-radius: 8px; background: #fff; }
 details summary { cursor: pointer; padding: 15px; font-weight: bold; background-color: #f0f0f0; }
+
+.chapter-header-block {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .chapter-header-block {
+        flex-direction: column;
+        text-align: center;
+    }
+    .chapter-illustration {
+        text-align: center !important;
+    }
+}
