@@ -3,11 +3,37 @@
 <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/test_style.css">
 </head>
 <body>
+
+<div id="sticky-header" style="position: sticky; top: 0; background: #fdfcf8; padding: 15px; border-bottom: 2px solid #333; z-index: 9999; display: flex; align-items: center; gap: 20px;">
+
+<!-- The Audio Player -->
+<audio id="header-audio" controls style="height: 30px;">
+<source src="{{ page.audio_url }}" type="audio/mpeg">
+</audio>
+
+<!-- The Slider -->
+<div>
+<label style="font-size: 14px;">Text Size: </label>
+<input type="range" id="sizeSlider" min="16" max="40" value="20">
+<span id="sizeValue" style="font-size: 14px; font-weight: bold;">20px</span>
+</div>
+
+</div>
     <div class="container">
         {{ content }}
     </div>
+<script>
+const slider = document.getElementById('sizeSlider');
+const output = document.getElementById('sizeValue');
+slider.oninput = function() {
+const val = this.value + 'px';
+output.innerHTML = val;
+document.documentElement.style.setProperty('--reader-size', val);
+};
+</script>
+
 </body>
 </html>
