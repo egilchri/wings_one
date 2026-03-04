@@ -6,11 +6,13 @@ Chapter 2: Marian's Shabby Comfort
 }
 
 Chapter 3: The Grandeur of Lancaster Gate
+
 {
 "action": "dalle.text2im",
-"action_input": "{ "prompt": "An impressionist oil painting in the style of Claude Monet. The interior of a grand, wealthy London house at Lancaster Gate. Aunt Maud (Mrs. Lowder), a formidable and 'massive' woman, sits in a room filled with 'heavy' and 'expensive' Victorian furniture. The light is rich and golden, reflecting off polished surfaces. Kate Croy stands nearby, her elegance contrasting with the 'monstrous' scale of the room. Broad, energetic brushstrokes of gold, crimson, and deep velvet. The scene feels like a 'court' or a 'counting-house'.", "size": "1024x1024" }",
-"thought": "This represents the transition to Aunt Maud’s world, described as 'the tall, rich, heavy house at Lancaster Gate' and 'the scale of a court'."
+"action_input": "{ "prompt": "An impressionist oil painting in the style of Claude Monet. Two young lovers, Merton Densher and Kate Croy, sit close together in simple wooden chairs under the massive, soft-edged trees of Kensington Gardens in London. The light is a hazy, late-afternoon winter sun. Kate is handsome but looks 'hard' and strategic; Merton is a tall, fairish, slightly unkempt Englishman. In the far distance, across a road, a grand London house at Lancaster Gate is visible, with a faint, metaphorical golden eagle motif shimmering in the sunlight above it. The brushwork is dappled and atmospheric, capturing a sense of a 'temple without an avenue' and the quiet tension of their secret meeting.", "size": "1024x1024" }",
+"thought": "This aligns with the actual events of Chapter 3: the Kensington Gardens setting, the specific descriptions of the characters' appearances, the 'penny chairs,' and the looming presence of Aunt Maud's house."
 }
+
 
 Chapter 4: Merton Densher in Kensington Gardens
 {
