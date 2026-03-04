@@ -1,0 +1,21 @@
+{
+  "short_name": "Wings One",
+  "name": "Wings of Dove One Bilingual",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/wings_one/index.html",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/wings_one/",
+  "theme_color": "#000000"
+}

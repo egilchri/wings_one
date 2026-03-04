@@ -39,6 +39,15 @@
         output.innerHTML = val;
         document.documentElement.style.setProperty('--reader-size', val);
     };
+
+   if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/wings_one/sw.js')
+        .then(reg => console.log('Service Worker registered!'))
+        .catch(err => console.log('Service Worker failed:', err));
+     });
+   }
+
 </script>
 
 </body>
