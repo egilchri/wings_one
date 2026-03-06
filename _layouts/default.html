@@ -13,49 +13,60 @@
 </head>
 <body>
 
-<div id="sticky-header" style="position: sticky; top: 0; background: #fdfcf8; padding: 15px; border-bottom: 2px solid #333; z-index: 9999; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
-
-    <a href="{{ site.baseurl }}/index.html" style="text-decoration: none; font-weight: bold; color: #007bff; font-family: sans-serif; font-size: 16px;">🏠 Home</a>
-
-    <audio id="header-audio" controls style="height: 54px; flex-grow: 1;">
-        <source src="{{ page.audio_url }}" type="audio/mpeg">
-    </audio>
-
-    <style>
-        @media (max-width: 600px) {
-            .size-controls { display: none !important; }
-        }
-    </style>
-    <div class="size-controls" style="display: flex; align-items: center; gap: 10px; white-space: nowrap;">
-        <label style="font-size: 14px;">Text Size: </label>
-        <input type="range" id="sizeSlider" min="16" max="40" value="20">
-        <span id="sizeValue" style="font-size: 14px; font-weight: bold;">20px</span>
+<div id="sticky-header" style="position: sticky; top: 0; background: #fdfcf8; padding: 15px; border-bottom: 2px solid #333; z-index: 9999; display: flex; flex-direction: column; gap: 10px;">
+    
+    <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 15px;">
+        <a href="{{ site.baseurl }}/index.html" style="text-decoration: none; font-weight: bold; color: #007bff; font-family: sans-serif; font-size: 16px;">🏠 Home</a>
+        
+        <audio id="header-audio" controls style="height: 54px; flex-grow: 1;">
+            <source src="{{ page.audio_url }}" type="audio/mpeg">
+        </audio>
     </div>
 
-</div>
+    <div style="display: flex; align-items: center; justify-content: space-around; background: #f1f1f1; padding: 8px; border-radius: 8px; gap: 20px; flex-wrap: wrap;">
+        
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <label style="font-size: 12px; font-weight: bold;">Speed: </label>
+            <input type="range" id="speedSlider" min="0.5" max="2.0" step="0.1" value="1.0" style="width: 80px;">
+            <span id="speedValue" style="font-size: 12px; font-weight: bold; min-width: 30px;">1.0x</span>
+        </div>
 
-<div class="container">
-    {{ content }}
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <label style="font-size: 12px; font-weight: bold;">Font: </label>
+            <input type="range" id="sizeSlider" min="16" max="40" value="20" style="width: 80px;">
+            <span id="sizeValue" style="font-size: 12px; font-weight: bold; min-width: 40px;">20px</span>
+        </div>
+    </div>
 </div>
 
 <script>
-    const slider = document.getElementById('sizeSlider');
-    const output = document.getElementById('sizeValue');
-    slider.oninput = function() {
+    const audio = document.getElementById('header-audio');
+    
+    // Playback Speed Logic
+    const speedSlider = document.getElementById('speedSlider');
+    const speedValue = document.getElementById('speedValue');
+    speedSlider.oninput = function() {
+        audio.playbackRate = this.value;
+        speedValue.innerHTML = this.value + 'x';
+    };
+
+    // Font Size Logic
+    const sizeSlider = document.getElementById('sizeSlider');
+    const sizeValue = document.getElementById('sizeValue');
+    sizeSlider.oninput = function() {
         const val = this.value + 'px';
-        output.innerHTML = val;
+        sizeValue.innerHTML = val;
         document.documentElement.style.setProperty('--reader-size', val);
     };
 
-   if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/wings_one/sw.js')
-        .then(reg => console.log('Service Worker registered!'))
-        .catch(err => console.log('Service Worker failed:', err));
-     });
-   }
-
+    // PWA Service Worker
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/wings_one/sw.js');
+        });
+    }
 </script>
+
 
 </body>
 </html>
