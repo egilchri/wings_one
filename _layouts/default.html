@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="/wings_one/icon-192.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
-<body>
+<body style="background-color: #fdfcf8; margin: 0; padding: 0;">
 
 <div id="sticky-header" style="position: sticky; top: 0; background: #fdfcf8; padding: 15px; border-bottom: 2px solid #333; z-index: 9999; display: flex; flex-direction: column; gap: 10px;">
     
@@ -26,17 +26,21 @@
     <div style="display: flex; align-items: center; justify-content: space-around; background: #f1f1f1; padding: 8px; border-radius: 8px; gap: 20px; flex-wrap: wrap;">
         
         <div style="display: flex; align-items: center; gap: 8px;">
-            <label style="font-size: 12px; font-weight: bold;">Speed: </label>
+            <label style="font-size: 12px; font-weight: bold; font-family: sans-serif;">Speed: </label>
             <input type="range" id="speedSlider" min="0.5" max="2.0" step="0.1" value="1.0" style="width: 80px;">
-            <span id="speedValue" style="font-size: 12px; font-weight: bold; min-width: 30px;">1.0x</span>
+            <span id="speedValue" style="font-size: 12px; font-weight: bold; font-family: sans-serif; min-width: 30px;">1.0x</span>
         </div>
 
         <div style="display: flex; align-items: center; gap: 8px;">
-            <label style="font-size: 12px; font-weight: bold;">Font: </label>
+            <label style="font-size: 12px; font-weight: bold; font-family: sans-serif;">Font: </label>
             <input type="range" id="sizeSlider" min="16" max="40" value="20" style="width: 80px;">
-            <span id="sizeValue" style="font-size: 12px; font-weight: bold; min-width: 40px;">20px</span>
+            <span id="sizeValue" style="font-size: 12px; font-weight: bold; font-family: sans-serif; min-width: 40px;">20px</span>
         </div>
     </div>
+</div>
+
+<div class="container" style="padding: 20px; max-width: 800px; margin: 0 auto;">
+    {{ content }}
 </div>
 
 <script>
@@ -59,14 +63,15 @@
         document.documentElement.style.setProperty('--reader-size', val);
     };
 
-    // PWA Service Worker
+    // PWA Service Worker Registration
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/wings_one/sw.js');
+            navigator.serviceWorker.register('/wings_one/sw.js')
+                .then(reg => console.log('Service Worker registered!'))
+                .catch(err => console.log('Service Worker failed:', err));
         });
     }
 </script>
-
 
 </body>
 </html>
